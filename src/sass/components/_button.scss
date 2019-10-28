@@ -1,0 +1,24 @@
+.btn-play {
+  display: block;
+  width: 100%;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  background-color: #fff;
+  text-transform: uppercase;
+  user-select: none;
+  color: #477148;
+  font-weight: bold;
+  font-size: 2rem;
+  box-shadow: 0.4rem 0.4rem 1rem rgba(0, 0, 0, 0.35);
+  transition: all 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(230, 230, 230);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}

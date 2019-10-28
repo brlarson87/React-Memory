@@ -1,22 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace; }
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  background-color: lightgrey;
+  overflow: hidden; }
 
-.App-link {
-  color: #09d3ac;
-}
+.stage-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-image: radial-gradient(#335234, #283f28);
+  height: 95%;
+  width: 88%;
+  margin-top: 2rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  padding: 3.5rem 2rem 2rem 2rem;
+  margin-left: 1rem;
+  box-shadow: inset 0.8rem 0.8rem 0.9rem #142414, inset -0.8rem -0.8rem 0.8rem #101d10, 1px 1px 0.5rem black; }
+  .stage-container .start-game-text {
+    font-size: 2rem;
+    color: #fff; }
+
+.btn-play {
+  display: block;
+  width: 100%;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  background-color: #fff;
+  text-transform: uppercase;
+  user-select: none;
+  color: #477148;
+  font-weight: bold;
+  font-size: 2rem;
+  box-shadow: 0.4rem 0.4rem 1rem rgba(0, 0, 0, 0.35);
+  transition: all 0.3s; }
+  .btn-play:hover {
+    cursor: pointer;
+    background-color: #e6e6e6; }
+  .btn-play:active, .btn-play:focus {
+    outline: none; }
+
+.card {
+  position: relative;
+  height: 22.5%;
+  width: 7%;
+  perspective: 110rem;
+  -moz-perspective: 110rem;
+  animation: deal 0.1s;
+  animation-fill-mode: both;
+  margin: 0 2px;
+  user-select: none; }
+  .card-1 {
+    animation-delay: 0.2s; }
+  .card-2 {
+    animation-delay: 0.4s; }
+  .card-3 {
+    animation-delay: 0.6s; }
+  .card-4 {
+    animation-delay: 0.8s; }
+  .card-5 {
+    animation-delay: 1s; }
+  .card-6 {
+    animation-delay: 1.2s; }
+  .card-7 {
+    animation-delay: 1.4s; }
+  .card-8 {
+    animation-delay: 1.6s; }
+  .card-9 {
+    animation-delay: 1.8s; }
+  .card-10 {
+    animation-delay: 2s; }
+  .card-11 {
+    animation-delay: 2.2s; }
+  .card-12 {
+    animation-delay: 2.4s; }
+  .card-13 {
+    animation-delay: 2.6s; }
+  .card-14 {
+    animation-delay: 2.6s; }
+  .card-15 {
+    animation-delay: 2.4s; }
+  .card-16 {
+    animation-delay: 2.2s; }
+  .card-17 {
+    animation-delay: 2s; }
+  .card-18 {
+    animation-delay: 1.8s; }
+  .card-19 {
+    animation-delay: 1.6s; }
+  .card-20 {
+    animation-delay: 1.4s; }
+  .card-21 {
+    animation-delay: 1.2s; }
+  .card-22 {
+    animation-delay: 1s; }
+  .card-23 {
+    animation-delay: 0.8s; }
+  .card-24 {
+    animation-delay: 0.6s; }
+  .card-25 {
+    animation-delay: 0.4s; }
+  .card-26 {
+    animation-delay: 0.2s; }
+  .card-27 {
+    animation-delay: 2.7s; }
+  .card-28 {
+    animation-delay: 2.9s; }
+  .card-29 {
+    animation-delay: 3.1s; }
+  .card-30 {
+    animation-delay: 3.3s; }
+  .card-31 {
+    animation-delay: 3.5s; }
+  .card-32 {
+    animation-delay: 3.7s; }
+  .card-33 {
+    animation-delay: 3.9s; }
+  .card-34 {
+    animation-delay: 4.1s; }
+  .card-35 {
+    animation-delay: 4.3s; }
+  .card-36 {
+    animation-delay: 4.5s; }
+  .card-37 {
+    animation-delay: 4.7s; }
+  .card-38 {
+    animation-delay: 4.9s; }
+  .card-39 {
+    animation-delay: 5.1s; }
+  .card-40 {
+    animation-delay: 5.1s; }
+  .card-41 {
+    animation-delay: 4.9s; }
+  .card-42 {
+    animation-delay: 4.7s; }
+  .card-43 {
+    animation-delay: 4.5s; }
+  .card-44 {
+    animation-delay: 4.3s; }
+  .card-45 {
+    animation-delay: 4.1s; }
+  .card-46 {
+    animation-delay: 3.9s; }
+  .card-47 {
+    animation-delay: 3.7s; }
+  .card-48 {
+    animation-delay: 3.5s; }
+  .card-49 {
+    animation-delay: 3.3s; }
+  .card-50 {
+    animation-delay: 3.1s; }
+  .card-51 {
+    animation-delay: 2.9s; }
+  .card-52 {
+    animation-delay: 2.7s; }
+  .card__side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: all 0.6s ease;
+    border-radius: 4px; }
+    .card__side--back {
+      transform: rotateY(180deg); }
+  .card:hover {
+    cursor: pointer; }
+
+img {
+  width: 100%;
+  height: 100%; }
+
+@keyframes deal {
+  from {
+    transform: translateX(-200rem); }
+  to {
+    transform: translateX(0); } }
+
+.side-bar {
+  height: 100%;
+  width: 12%;
+  padding: 10rem 3rem; }
+  .side-bar__heading {
+    background-image: linear-gradient(#477148, #29422a);
+    text-align: center;
+    margin-bottom: 0.5rem;
+    user-select: none; }
+  .side-bar .title {
+    font-size: 3rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.8);
+    user-select: none; }
+
+.score-board {
+  position: relative;
+  height: 10rem;
+  width: 100%;
+  background-color: #a50d0d;
+  margin-bottom: 2rem;
+  clip-path: polygon(10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%);
+  padding: 1rem;
+  box-shadow: inset 5px 5px 1rem rgba(78, 4, 4, 0.4), inset -4px -4px 1.2rem rgba(80, 6, 6, 0.35); }
+  .score-board__container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    height: 85%;
+    width: 85%;
+    background-color: #000;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 700;
+    box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.4), inset -2px -2px 5px rgba(255, 255, 255, 0.4), 2px -2px 3rem rgba(0, 0, 0, 0.6);
+    user-select: none; }
+
+.card-row {
+  display: flex;
+  justify-content: space-around;
+  height: 24%;
+  margin-top: 0.7rem; }

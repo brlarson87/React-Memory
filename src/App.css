@@ -17,6 +17,9 @@ body {
   background-color: lightgrey;
   overflow: hidden; }
 
+.sm-font {
+  font-size: 1.4rem; }
+
 .stage-container {
   display: flex;
   justify-content: space-around;
@@ -49,7 +52,8 @@ body {
   transition: all 0.3s; }
   .btn-play:hover {
     cursor: pointer;
-    background-color: #e6e6e6; }
+    background-color: #e6e6e6;
+    box-shadow: 0.4rem 0.4rem 1rem rgba(0, 0, 0, 0.55); }
   .btn-play:active, .btn-play:focus {
     outline: none; }
 
@@ -234,7 +238,34 @@ img {
     font-size: 4rem;
     font-weight: 700;
     box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.4), inset -2px -2px 5px rgba(255, 255, 255, 0.4), 2px -2px 3rem rgba(0, 0, 0, 0.6);
-    user-select: none; }
+    user-select: none;
+    transition: all 0.2s; }
+
+.end-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.8); }
+  .end-modal__content {
+    position: absolute;
+    height: 45%;
+    width: 45%;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    background-color: #fff; }
+  .end-modal__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: #477148; }
 
 .card-row {
   display: flex;

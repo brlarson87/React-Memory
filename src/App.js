@@ -5,6 +5,7 @@ import store from "./store";
 
 import Stage from "./components/Stage";
 import SideBar from "./components/SideBar";
+import EndModal from "./components/EndModal";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <div className='App'>
         <Stage />
         <SideBar />
+        <EndModal />
       </div>
     </Provider>
   );

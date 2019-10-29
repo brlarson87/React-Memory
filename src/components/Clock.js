@@ -3,10 +3,10 @@ import { connect } from "react-redux";
 
 import timeFormat from "../utils/format";
 
-import { timeDecrement } from "../actions/mainActions";
+import { timeDecrement, openModal } from "../actions/mainActions";
 
-const Clock = ({ timeLeft, playing, timeDecrement }) => {
-  if (playing) {
+const Clock = ({ timeLeft, timeDecrement, clockRunning, openModal }) => {
+  if (clockRunning && timeLeft) {
     if (timeLeft === 300) {
       setTimeout(() => {
         timeDecrement();
@@ -17,20 +17,29 @@ const Clock = ({ timeLeft, playing, timeDecrement }) => {
       }, 1000);
     }
   }
+  if (!timeLeft) {
+    openModal();
+  }
 
   return (
     <div className='score-board'>
-      <div className='score-board__container'>{timeFormat(timeLeft)}</div>
+      <div className='score-board__container'>
+        {timeLeft ? (
+          timeFormat(timeLeft)
+        ) : (
+          <h6 className='sm-font'>Time's up</h6>
+        )}
+      </div>
     </div>
   );
 };
 
 const mapStateToProps = state => ({
   timeLeft: state.main.time,
-  playing: state.main.playing
+  clockRunning: state.main.clockRunning
 });
 
 export default connect(
   mapStateToProps,
-  { timeDecrement }
+  { timeDecrement, openModal }
 )(Clock);

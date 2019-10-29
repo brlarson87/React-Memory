@@ -1,7 +1,14 @@
 import React from "react";
 import { connect } from "react-redux";
 
-const Matches = ({ matches }) => {
+import { stopClock, openModal } from "../actions/mainActions";
+
+const Matches = ({ matches, stopClock, openModal }) => {
+  if (matches === 26) {
+    stopClock();
+    openModal();
+  }
+
   return (
     <div className='score-board'>
       <div className='score-board__container'>{matches}</div>
@@ -13,4 +20,7 @@ const mapStateToProps = state => ({
   matches: state.main.matches
 });
 
-export default connect(mapStateToProps)(Matches);
+export default connect(
+  mapStateToProps,
+  { stopClock, openModal }
+)(Matches);

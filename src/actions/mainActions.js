@@ -20,15 +20,17 @@ export const compareGuesses = ga => dispatch => {
       setTimeout(() => {
         front.style.opacity = "0";
         back.style.opacity = "0";
+        ga[i].style.visibility = "hidden";
       }, 600);
     }
     dispatch({
       type: "CLEAR_GUESSES"
     });
-    dispatch({
-      type: "FOUND_MATCH"
-    });
-    console.log("same");
+    setTimeout(() => {
+      dispatch({
+        type: "FOUND_MATCH"
+      });
+    }, 600);
   } else {
     for (let i = 0; i < ga.length; i++) {
       let front = ga[i].querySelector(".card__side--front");
@@ -41,7 +43,6 @@ export const compareGuesses = ga => dispatch => {
     dispatch({
       type: "CLEAR_GUESSES"
     });
-    console.log("Not same");
   }
 };
 
@@ -54,5 +55,17 @@ export const timeDecrement = () => dispatch => {
 export const startGame = () => dispatch => {
   dispatch({
     type: "START"
+  });
+};
+
+export const stopClock = () => dispatch => {
+  dispatch({
+    type: "STOP_CLOCK"
+  });
+};
+
+export const openModal = () => dispatch => {
+  dispatch({
+    type: "OPEN_MODAL"
   });
 };

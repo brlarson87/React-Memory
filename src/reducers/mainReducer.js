@@ -265,7 +265,9 @@ const initialState = {
   matches: 0,
   time: 300,
   playing: false,
-  guesses: []
+  clockRunning: false,
+  guesses: [],
+  modal: "hidden"
 };
 
 export default function(state = initialState, action) {
@@ -285,7 +287,8 @@ export default function(state = initialState, action) {
     case "START":
       return {
         ...state,
-        playing: !state.playing
+        playing: !state.playing,
+        clockRunning: !state.clockRunning
       };
     case "CLEAR_GUESSES":
       return {
@@ -297,6 +300,16 @@ export default function(state = initialState, action) {
         ...state,
         matches: state.matches + 1,
         matchesLeft: state.matchesLeft - 1
+      };
+    case "STOP_CLOCK":
+      return {
+        ...state,
+        clockRunning: !state.clockRunning
+      };
+    case "OPEN_MODAL":
+      return {
+        ...state,
+        modal: "visible"
       };
     default:
       return state;

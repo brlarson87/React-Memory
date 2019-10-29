@@ -16,6 +16,19 @@
   box-shadow: inset 0.8rem 0.8rem 0.9rem rgb(20, 36, 20),
     inset -0.8rem -0.8rem 0.8rem rgb(16, 29, 16), 1px 1px 0.5rem rgb(0, 0, 0);
 
+  @include respond(tab-land) {
+    height: 90vh;
+    width: 99vw;
+    margin-bottom: 1rem;
+  }
+
+  @include respond(phone) {
+    height: 90vh;
+    width: 99vw;
+    margin: 1rem 1.5rem 1rem 0.3rem;
+    padding: 2.5rem 1rem 1rem 1rem;
+  }
+
   .start-game-text {
     font-size: 2rem;
     color: #fff;

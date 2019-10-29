@@ -9,6 +9,11 @@
   margin: 0 2px;
   user-select: none;
 
+  @include respond(phone) {
+    height: 9%;
+    width: 15%;
+  }
+
   &-1 {
     animation-delay: 0.2s;
   }

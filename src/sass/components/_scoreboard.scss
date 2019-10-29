@@ -18,6 +18,12 @@
   box-shadow: inset 5px 5px 1rem rgba(78, 4, 4, 0.4),
     inset -4px -4px 1.2rem rgba(80, 6, 6, 0.35);
 
+  @include respond(tab-land) {
+    height: 90%;
+    width: 20%;
+    padding: 0.5rem;
+  }
+
   &__container {
     position: absolute;
     display: flex;
@@ -38,5 +44,10 @@
       2px -2px 3rem rgba(0, 0, 0, 0.6);
     user-select: none;
     transition: all 0.2s;
+
+    @include respond(tab-land) {
+      font-size: 3rem;
+      font-weight: 400;
+    }
   }
 }

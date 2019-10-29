@@ -3,19 +3,53 @@
   width: 12%;
   padding: 10rem 3rem;
 
+  @include respond(tab-land) {
+    height: 5vh;
+    width: 99vw;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  @include respond(phone) {
+    margin-top: 1rem;
+  }
+
   &__heading {
     background-image: linear-gradient(#477148, darken(#477148, 15%));
     text-align: center;
     margin-bottom: 0.5rem;
     user-select: none;
+
+    @include respond(tab-land) {
+      margin: 0;
+      background-image: none;
+    }
   }
 
   .title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.8);
     user-select: none;
+
+    @include respond(tab-land) {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #477148;
+      text-shadow: none;
+      transform: translate(5rem, 60%);
+      text-align: right;
+    }
+
+    @include respond(tab-port) {
+      transform: translate(2.5rem, 60%);
+    }
+
+    @include respond(phone) {
+      transform: translate(1rem, 80%);
+    }
   }
 }

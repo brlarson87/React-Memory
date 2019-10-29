@@ -12,6 +12,11 @@
   box-shadow: 0.4rem 0.4rem 1rem rgba(0, 0, 0, 0.35);
   transition: all 0.3s;
 
+  @include respond(tab-land) {
+    height: 100%;
+    margin-left: 0.5rem;
+  }
+
   &:hover {
     cursor: pointer;
     background-color: rgb(230, 230, 230);

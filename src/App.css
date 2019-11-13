@@ -14,7 +14,7 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: "Roboto Mono", monospace; }
+  font-family: "Raleway", sans-serif; }
 
 .App {
   height: 100vh;
@@ -32,7 +32,10 @@ body {
       padding-bottom: 1rem; } }
 
 .sm-font {
-  font-size: 1.4rem; }
+  font-size: 1.4rem !important; }
+  @media (max-width: 45em) {
+    .sm-font {
+      font-size: 0.8rem; } }
 
 .stage-container {
   display: flex;
@@ -272,7 +275,8 @@ img {
         transform: translate(2.5rem, 60%); } }
     @media (max-width: 45em) {
       .side-bar .title {
-        transform: translate(1rem, 80%); } }
+        font-size: 1.2rem;
+        transform: translate(4px, 1.1rem); } }
 
 .score-board {
   position: relative;
@@ -305,10 +309,11 @@ img {
     font-weight: 700;
     box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.4), inset -2px -2px 5px rgba(255, 255, 255, 0.4), 2px -2px 3rem rgba(0, 0, 0, 0.6);
     user-select: none;
-    transition: all 0.2s; }
+    transition: all 0.2s;
+    padding: 0 2px; }
     @media (max-width: 95em) {
       .score-board__container {
-        font-size: 3rem;
+        font-size: 1.4rem;
         font-weight: 400; } }
 
 .end-modal {
@@ -321,22 +326,40 @@ img {
   background-color: rgba(0, 0, 0, 0.8); }
   .end-modal__content {
     position: absolute;
-    height: 45%;
-    width: 45%;
+    height: 25%;
+    width: 25%;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -30%);
-    background-color: #fff; }
+    background-color: #fff;
+    border-radius: 1rem; }
+    .end-modal__content .restart-btn {
+      position: absolute;
+      display: block;
+      width: 50%;
+      padding: 1rem 0;
+      background-image: linear-gradient(to bottom, #3d613e, #518152);
+      bottom: 25%;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      text-transform: uppercase;
+      transition: all 0.3s; }
+      .end-modal__content .restart-btn:hover {
+        cursor: pointer; }
+      .end-modal__content .restart-btn:active, .end-modal__content .restart-btn:focus {
+        outline: none;
+        transform: translateX(-50%) translateY(1px); }
     @media (max-width: 45em) {
       .end-modal__content {
         height: 30%; } }
   .end-modal__title {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-size: 4rem;
+    font-size: 2rem;
     text-transform: uppercase;
     color: #477148; }
     @media (max-width: 45em) {

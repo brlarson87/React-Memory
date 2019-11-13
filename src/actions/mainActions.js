@@ -65,7 +65,9 @@ export const stopClock = () => dispatch => {
 };
 
 export const openModal = () => dispatch => {
-  dispatch({
-    type: "OPEN_MODAL"
-  });
+  setTimeout(() => {
+    dispatch({
+      type: "OPEN_MODAL"
+    });
+  }, 1000);
 };

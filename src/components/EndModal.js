@@ -4,6 +4,10 @@ import { connect } from "react-redux";
 import finalScore from "../utils/finalScore";
 
 const EndModal = ({ modalStatus, timeLeft, matches }) => {
+  function refreshPage() {
+    window.location.reload(false);
+  }
+
   return (
     <div
       className='end-modal'
@@ -19,6 +23,9 @@ const EndModal = ({ modalStatus, timeLeft, matches }) => {
           <span>Your Score:&nbsp;</span>
           {finalScore(timeLeft, matches)}
         </h2>
+        <button onClick={refreshPage} className='restart-btn'>
+          Play Again
+        </button>
       </div>
     </div>
   );

@@ -33,9 +33,15 @@
       color: white;
       text-transform: uppercase;
       transition: all 0.3s;
+      font-weight: 500;
 
       &:hover {
         cursor: pointer;
+        background-image: linear-gradient(
+          to bottom,
+          lighten(#477148, 5%),
+          darken(#477148, 5%)
+        );
       }
 
       &:active,

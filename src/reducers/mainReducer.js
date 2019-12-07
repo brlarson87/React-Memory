@@ -267,7 +267,8 @@ const initialState = {
   playing: false,
   clockRunning: false,
   guesses: [],
-  modal: "hidden"
+  modal: "hidden",
+  covered: true
 };
 
 export default function(state = initialState, action) {
@@ -310,6 +311,11 @@ export default function(state = initialState, action) {
       return {
         ...state,
         modal: "visible"
+      };
+    case "REMOVE_COVER":
+      return {
+        ...state,
+        covered: false
       };
     default:
       return state;

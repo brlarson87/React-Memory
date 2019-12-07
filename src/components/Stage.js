@@ -38,7 +38,4 @@ const mapStateToProps = state => ({
   playing: state.main.playing
 });
 
-export default connect(
-  mapStateToProps,
-  { addGuess, compareGuesses }
-)(Stage);
+export default connect(mapStateToProps, { addGuess, compareGuesses })(Stage);

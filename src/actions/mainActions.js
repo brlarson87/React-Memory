@@ -1,11 +1,4 @@
 export const addGuess = guess => dispatch => {
-  // let front = guess.querySelector(".card__side--front");
-  // let back = guess.querySelector(".card__side--back");
-  // setTimeout(() => {
-  //   front.style.transform = "rotateY(0)";
-  //   back.style.transform = "rotateY(-180deg)";
-  // }, 1000);
-
   dispatch({
     type: "GUESS_ADDED",
     payload: guess
@@ -69,5 +62,11 @@ export const openModal = () => dispatch => {
     dispatch({
       type: "OPEN_MODAL"
     });
-  }, 1000);
+  }, 600);
+};
+
+export const removeCover = () => dispatch => {
+  dispatch({
+    type: "REMOVE_COVER"
+  });
 };

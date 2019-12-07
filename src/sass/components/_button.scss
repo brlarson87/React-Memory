@@ -1,4 +1,5 @@
 .btn-play {
+  position: relative;
   display: block;
   width: 100%;
   margin-bottom: 3rem;
@@ -11,6 +12,7 @@
   font-size: 2rem;
   box-shadow: 0.4rem 0.4rem 1rem rgba(0, 0, 0, 0.35);
   transition: all 0.3s;
+  z-index: 40;
 
   @include respond(tab-land) {
     height: 100%;

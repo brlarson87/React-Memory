@@ -3,13 +3,20 @@ import { connect } from "react-redux";
 
 import timeFormat from "../utils/format";
 
-import { timeDecrement, openModal } from "../actions/mainActions";
+import { timeDecrement, openModal, removeCover } from "../actions/mainActions";
 
-const Clock = ({ timeLeft, timeDecrement, clockRunning, openModal }) => {
+const Clock = ({
+  timeLeft,
+  timeDecrement,
+  clockRunning,
+  openModal,
+  removeCover
+}) => {
   if (clockRunning && timeLeft) {
     if (timeLeft === 300) {
       setTimeout(() => {
         timeDecrement();
+        removeCover();
       }, 5400);
     } else {
       setTimeout(() => {
@@ -39,7 +46,8 @@ const mapStateToProps = state => ({
   clockRunning: state.main.clockRunning
 });
 
-export default connect(
-  mapStateToProps,
-  { timeDecrement, openModal }
-)(Clock);
+export default connect(mapStateToProps, {
+  timeDecrement,
+  openModal,
+  removeCover
+})(Clock);

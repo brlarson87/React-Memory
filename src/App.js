@@ -6,6 +6,7 @@ import store from "./store";
 import Stage from "./components/Stage";
 import SideBar from "./components/SideBar";
 import EndModal from "./components/EndModal";
+import DealCover from "./components/DealCover";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Stage />
         <SideBar />
         <EndModal />
+        <DealCover />
       </div>
     </Provider>
   );

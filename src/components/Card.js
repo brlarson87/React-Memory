@@ -16,6 +16,10 @@ const Card = props => {
 
     let front = e.currentTarget.querySelector(".card__side--front");
     let back = e.currentTarget.querySelector(".card__side--back");
+    let cover = e.currentTarget.querySelector(".card__cover");
+
+    cover.style.width = "100%";
+    cover.style.height = "100%";
 
     front.style.transform = "rotateY(-180deg)";
     back.style.transform = "rotateY(0)";
@@ -38,6 +42,7 @@ const Card = props => {
       <div className='card__side card__side--back'>
         <img src={props.imagePath} alt='card-back' />
       </div>
+      <div className='card__cover'></div>
     </div>
   );
 };

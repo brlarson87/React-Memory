@@ -16,7 +16,7 @@
 
   @include respond(tab-land) {
     height: 10.8%;
-    width: 15%;
+    width: 13.5%;
   }
 
   &-1 {
@@ -202,13 +202,14 @@
     cursor: pointer;
   }
 
-  // &:hover &__side--front {
-  //   transform: rotateY(-180deg);
-  // }
-
-  // &:hover &__side--back {
-  //   transform: rotateY(0);
-  // }
+  &__cover {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    z-index: 55;
+  }
 }
 
 img {

@@ -24,6 +24,10 @@
     padding: 0.5rem;
   }
 
+  @include respond(phone) {
+    width: 18%;
+  }
+
   &__container {
     position: absolute;
     display: flex;

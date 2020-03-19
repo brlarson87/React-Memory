@@ -269,10 +269,10 @@ img {
       padding: 0;
       display: flex;
       justify-content: space-around;
-      margin-top: 1rem; } }
+      margin-top: 1rem 0.5rem 0 0; } }
   @media (max-width: 45em) {
     .side-bar {
-      margin-top: 1rem; } }
+      margin-top: 1.5rem 1rem 0 0; } }
   .side-bar__heading {
     background-image: linear-gradient(#477148, #29422a);
     text-align: center;
@@ -361,6 +361,9 @@ img {
     transform: translate(-50%, -30%);
     background-color: #fff;
     border-radius: 1rem; }
+    @media (max-width: 45em) {
+      .end-modal__content {
+        width: 80%; } }
     .end-modal__content .restart-btn {
       position: absolute;
       display: block;

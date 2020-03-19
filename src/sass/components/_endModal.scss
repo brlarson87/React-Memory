@@ -17,6 +17,10 @@
     background-color: #fff;
     border-radius: 1rem;
 
+    @include respond(phone) {
+      width: 80%;
+    }
+
     .restart-btn {
       position: absolute;
       display: block;

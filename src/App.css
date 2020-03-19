@@ -29,7 +29,8 @@ body {
     .App {
       flex-direction: column-reverse;
       justify-content: stretch;
-      height: 94vh; } }
+      height: 94vh;
+      padding-bottom: 8vh; } }
 
 .sm-font {
   font-size: 1.4rem !important; }
@@ -95,8 +96,7 @@ body {
   @media (max-width: 95em) {
     .btn-play {
       height: 100%;
-      margin-left: 0.5rem;
-      margin-top: 0.5rem; } }
+      margin: 0.5rem 0 0.5rem 0.5rem; } }
   .btn-play:hover {
     cursor: pointer;
     background-color: #e6e6e6;

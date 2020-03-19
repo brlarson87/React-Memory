@@ -30,7 +30,7 @@ body {
       flex-direction: column-reverse;
       justify-content: stretch;
       height: 94vh;
-      padding-bottom: 8vh; } }
+      background-color: #fff; } }
 
 .sm-font {
   font-size: 1.4rem !important; }
@@ -62,7 +62,7 @@ body {
     .stage-container {
       height: 88vh;
       width: 100vw;
-      margin-top: 7px;
+      margin: 7px 0 0 0;
       padding: 0.5rem 1rem 1rem 0.5rem; } }
   .stage-container .start-game-text {
     font-size: 2rem;

@@ -34,8 +34,8 @@ body {
 
   @include respond(phone) {
     flex-direction: column-reverse;
-    justify-content: space-around;
-    padding-bottom: 1rem;
+    justify-content: stretch;
+    height: 94vh;
   }
 }
 

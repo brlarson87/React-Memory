@@ -28,8 +28,8 @@ body {
   @media (max-width: 45em) {
     .App {
       flex-direction: column-reverse;
-      justify-content: space-around;
-      padding-bottom: 1rem; } }
+      justify-content: stretch;
+      height: 94vh; } }
 
 .sm-font {
   font-size: 1.4rem !important; }

@@ -28,6 +28,7 @@ export const compareGuesses = ga => dispatch => {
     for (let i = 0; i < ga.length; i++) {
       let front = ga[i].querySelector(".card__side--front");
       let back = ga[i].querySelector(".card__side--back");
+      ga[i].style.pointerEvents = "auto";
       setTimeout(() => {
         front.style.transform = "rotateY(0)";
         back.style.transform = "rotateY(-180deg)";

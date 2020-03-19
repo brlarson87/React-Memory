@@ -14,6 +14,8 @@ const Card = props => {
   const flipCard = e => {
     e.persist();
 
+    e.currentTarget.style.pointerEvents = "none";
+
     let front = e.currentTarget.querySelector(".card__side--front");
     let back = e.currentTarget.querySelector(".card__side--back");
     let cover = e.currentTarget.querySelector(".card__cover");

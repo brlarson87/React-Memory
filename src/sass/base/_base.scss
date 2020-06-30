@@ -1,13 +1,14 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 
 html {
   font-size: 62.5%;
 
-  @include respond(tab-port) {
+  @include respond(tab-land) {
     font-size: 55%;
   }
 
@@ -17,6 +18,7 @@ html {
 }
 
 body {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
 }
@@ -24,19 +26,31 @@ body {
 .App {
   height: 100vh;
   width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: lightgrey;
   overflow: hidden;
 
   @include respond(tab-land) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 1rem 0 1.5rem 0;
   }
 
   @include respond(phone) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
+    -webkit-box-pack: stretch;
+    -ms-flex-pack: stretch;
     justify-content: stretch;
-    height: 94vh;
-    background-color: #fff;
   }
 }
 

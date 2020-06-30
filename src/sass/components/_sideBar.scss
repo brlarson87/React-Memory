@@ -1,55 +1,39 @@
 .side-bar {
-  height: 100%;
-  width: 12%;
+  width: 13%;
   padding: 10rem 3rem;
 
   @include respond(tab-land) {
-    height: 5vh;
-    width: 99vw;
+    width: 90vw;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
-    margin-top: 1rem 0.5rem 0 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 auto;
   }
 
   &__heading {
-    background-image: linear-gradient(#477148, darken(#477148, 15%));
+    background-color: lightgrey;
+    color: darken(rgb(71, 113, 72), 5%);
     text-align: center;
-    margin-bottom: 0.5rem;
-    user-select: none;
-
-    @include respond(tab-land) {
-      margin: 0;
-      background-image: none;
-    }
   }
 
   .title {
     font-size: 2.5rem;
-    color: #fff;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.8);
-    user-select: none;
 
     @include respond(tab-land) {
       font-size: 1.4rem;
-      font-weight: 700;
-      color: #477148;
-      text-shadow: none;
-      transform: translate(5rem, 60%);
-      text-align: right;
-    }
-
-    @include respond(tab-port) {
-      transform: translate(2.5rem, 60%);
     }
 
     @include respond(phone) {
       font-size: 1.2rem;
-      transform: translate(4px, 1.1rem);
       letter-spacing: 0;
-      margin-top: 0.5rem;
     }
   }
 }

@@ -10,14 +10,14 @@ const Clock = ({
   timeDecrement,
   clockRunning,
   openModal,
-  removeCover
+  removeCover,
 }) => {
   if (clockRunning && timeLeft) {
     if (timeLeft === 300) {
       setTimeout(() => {
         timeDecrement();
         removeCover();
-      }, 5400);
+      }, 300);
     } else {
       setTimeout(() => {
         timeDecrement();
@@ -41,13 +41,13 @@ const Clock = ({
   );
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   timeLeft: state.main.time,
-  clockRunning: state.main.clockRunning
+  clockRunning: state.main.clockRunning,
 });
 
 export default connect(mapStateToProps, {
   timeDecrement,
   openModal,
-  removeCover
+  removeCover,
 })(Clock);

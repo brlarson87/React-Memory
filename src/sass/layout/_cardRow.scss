@@ -1,5 +1,8 @@
 .card-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   height: 24%;
   margin-top: 0.7rem;

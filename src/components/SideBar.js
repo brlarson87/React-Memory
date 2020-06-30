@@ -36,14 +36,11 @@ const SideBar = ({ playing, startGame }) => {
   );
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   matches: state.main.matches,
   matchesLeft: state.main.matchesLeft,
   playing: state.main.playing,
-  guesses: state.main.guesses
+  guesses: state.main.guesses,
 });
 
-export default connect(
-  mapStateToProps,
-  { startGame }
-)(SideBar);
+export default connect(mapStateToProps, { startGame })(SideBar);

@@ -13,6 +13,8 @@
     width: 25%;
     top: 30%;
     left: 50%;
+    -webkit-transform: translate(-50%, -30%);
+    -ms-transform: translate(-50%, -30%);
     transform: translate(-50%, -30%);
     background-color: #fff;
     border-radius: 1rem;
@@ -26,6 +28,18 @@
       display: block;
       width: 50%;
       padding: 1rem 0;
+      background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(darken(#477148, 5%)),
+        to(lighten(#477148, 5%))
+      );
+      background-image: -o-linear-gradient(
+        top,
+        darken(#477148, 5%),
+        lighten(#477148, 5%)
+      );
       background-image: linear-gradient(
         to bottom,
         darken(#477148, 5%),
@@ -33,14 +47,30 @@
       );
       bottom: 25%;
       left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
       transform: translateX(-50%);
       color: white;
       text-transform: uppercase;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
       transition: all 0.3s;
       font-weight: 500;
 
       &:hover {
         cursor: pointer;
+        background-image: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          from(lighten(#477148, 5%)),
+          to(darken(#477148, 5%))
+        );
+        background-image: -o-linear-gradient(
+          top,
+          lighten(#477148, 5%),
+          darken(#477148, 5%)
+        );
         background-image: linear-gradient(
           to bottom,
           lighten(#477148, 5%),
@@ -51,6 +81,8 @@
       &:active,
       &:focus {
         outline: none;
+        -webkit-transform: translateX(-50%) translateY(1px);
+        -ms-transform: translateX(-50%) translateY(1px);
         transform: translateX(-50%) translateY(1px);
       }
     }
@@ -64,6 +96,8 @@
     position: absolute;
     top: 40%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
     font-size: 2rem;
@@ -77,14 +111,30 @@
   }
 }
 
-@keyframes zoomIn {
+@-webkit-keyframes zoomIn {
   from {
     opacity: 0;
+    -webkit-transform: translate(-50%, -30%) scale(0.2);
     transform: translate(-50%, -30%) scale(0.2);
   }
 
   to {
     opacity: 1;
+    -webkit-transform: translate(-50%, -30%) scale(1);
+    transform: translate(-50%, -30%) scale(1);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -30%) scale(0.2);
+    transform: translate(-50%, -30%) scale(0.2);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -30%) scale(1);
     transform: translate(-50%, -30%) scale(1);
   }
 }

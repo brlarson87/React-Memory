@@ -2,8 +2,8 @@ import React from "react";
 
 import guessesArr from "../utils/guesses";
 
-const Card = props => {
-  const guessAdded = guess => {
+const Card = (props) => {
+  const guessAdded = (guess) => {
     props.addGuess(guess);
     let ga = guessesArr();
     if (ga.length > 1) {
@@ -11,7 +11,7 @@ const Card = props => {
     }
   };
 
-  const flipCard = e => {
+  const flipCard = (e) => {
     e.persist();
 
     e.currentTarget.style.pointerEvents = "none";
@@ -32,8 +32,9 @@ const Card = props => {
   return (
     <div
       className={`card card-${props.number + 1}`}
+      //className='card'
       value={props.val}
-      onClick={e => flipCard(e)}
+      onClick={(e) => flipCard(e)}
     >
       <div className='card__side card__side--front'>
         <img

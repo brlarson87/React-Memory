@@ -16,6 +16,10 @@
     margin: 0 auto;
   }
 
+  @include respond(phone) {
+    padding-bottom: 1rem;
+  }
+
   &__heading {
     background-color: lightgrey;
     color: darken(rgb(71, 113, 72), 5%);
